@@ -124,3 +124,10 @@ async def chat_stream(
     return StreamingResponse(
         generate_chat_response(message, checkpoint_id),
         media_type="text/event-stream")
+
+@app.get("/")
+async def root():
+    """
+    Endpoint de base pour vérifier que le serveur fonctionne.
+    """
+    return {"message": "Bienvenue sur l'API Multi-Agents!"}
