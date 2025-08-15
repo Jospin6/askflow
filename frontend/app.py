@@ -56,7 +56,7 @@ if user_query:
                     "allow_search": allow_search
                 }
 
-                res=requests.post("http://localhost:9999/chat", json=payload)
+                res=requests.post("http://localhost:8000/chat", json=payload)
                 response=res.json()
                 st.markdown(response)
                 st.session_state.chat_history.append(("ai", response))

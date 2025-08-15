@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from app.model import RequestState
-from services.agents.agents import get_response_from_ai_agent
+from backend.model import RequestState
+from backend.services.agents.agents import get_response_from_ai_agent
 
 router = APIRouter()
 
