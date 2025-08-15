@@ -1,5 +1,6 @@
 pydantic
 fastapi
+uvicorn
 python-dotenv
 langgraph
 langchain
