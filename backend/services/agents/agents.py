@@ -1,7 +1,7 @@
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from services.agents.llm_provider import get_llm
-from services.agents.tools import get_tools
+from backend.services.agents.llm_provider import get_llm
+from backend.services.agents.tools import get_tools
 
 
 def get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provider):
