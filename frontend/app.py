@@ -1,6 +1,12 @@
 import streamlit as st
 import requests
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+
+BASE_URL=os.getenv("BASE_URL")
 
 st.set_page_config(page_title="AI Agent Chatbot", layout="centered")
 
@@ -9,8 +15,8 @@ st.markdown("Chat with multiple model and web search")
 
 with st.sidebar:
     st.header("Agent configuration")
-    model_provider = st.selectbox("Model provider", ["Groq", "OpenAI"])
-    model_name=st.selectbox("Model name", ["llama3-70b-8192", "gpt-4o-mini"])
+    model_provider = st.selectbox("Model provider", ["Groq"])
+    model_name=st.selectbox("Model name", ["llama3-70b-8192"])
 
     system_prompt=st.text_area(
         "System Prompt",
@@ -56,7 +62,7 @@ if user_query:
                     "allow_search": allow_search
                 }
 
-                res=requests.post("http://localhost:8000/chat", json=payload)
+                res=requests.post(f"{BASE_URL}/chat", json=payload)
                 response=res.json()
                 st.markdown(response)
                 st.session_state.chat_history.append(("ai", response))
