@@ -60,7 +60,7 @@ AskFlow is an intelligent chatbot application that leverages advanced AI decisio
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/askflow.git
+git clone https://github.com/Jospin6/askflow.git
 cd askflow 
 ```
 
@@ -72,3 +72,6 @@ cd askflow
     # Start UI (in separate terminal)
     cd ui && streamlit run app.py
     ```
+
+### 👨‍💻 Author
+Built with ❤️ by Jospin Ndagano
