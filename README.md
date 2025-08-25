@@ -12,6 +12,8 @@
 
 AskFlow is an intelligent chatbot application that leverages advanced AI decision-making to provide accurate responses by either answering directly from its knowledge or performing real-time internet searches using Tavily Search API.
 
+![screenshot](./screenshot.png)
+
 ## Features
 
 - **Intelligent Decision Making**: LangGraph-powered agent that decides whether to answer directly or search the web
